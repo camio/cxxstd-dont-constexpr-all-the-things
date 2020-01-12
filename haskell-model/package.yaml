@@ -1,0 +1,28 @@
+name:                executor-model
+version:             0.1.0.0
+synopsis:            toying around with the model of C++ executors, senders, and receivers
+description:         Related to WG21 paper
+homepage:            www.bloomberg.com
+author:              Bloomberg LP
+maintainer:          Bloomberg LP
+copyright:           Bloomberg LP
+category:            Text
+
+extra-source-files: []
+
+dependencies:
+- base >= 4.7 && < 5
+- profunctors
+- atomic-primops
+
+library:
+  source-dirs: src
+
+tests:
+  spec:
+    source-dirs:        test
+    main:               Spec.hs
+    dependencies:
+    - executor-model
+    - hspec
+    - QuickCheck
